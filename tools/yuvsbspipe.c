@@ -96,7 +96,7 @@ int main(int argc, char* argv[])
                 else if( strcmp(argv[i],"-o") == 0 )
 		{
 			++i;
-			fd_out = open(argv[i],O_WRONLY);
+			fd_out = open(argv[i],O_WRONLY|O_CREAT|O_TRUNC, S_IRUSR|S_IWUSR|S_IRGRP|S_IROTH);
 			if( fd_out<0 ) {fprintf(stderr,"Can't open output\n"); return 1; }
 		}
                 else if( strcmp(argv[i],"-sbs") == 0 )
