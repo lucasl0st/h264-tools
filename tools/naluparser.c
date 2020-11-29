@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdint.h>
+#include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
 
 enum  	NAL_unit_type {
   UNKNOWN = 0, SLICE = 1, SLICE_DPA = 2, SLICE_DPB = 3,
