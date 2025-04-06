@@ -229,7 +229,7 @@ static int InterpretSubsetSPS (VideoParameters *p_Vid, DataPartition *p, int *cu
   if(subset_sps->Valid || subset_sps->num_views_minus1>=0)
   {
     if(memcmp(&subset_sps->sps, sps, sizeof (seq_parameter_set_rbsp_t)-sizeof(int)))
-      assert(0);
+      fprintf(stderr, "Error: Subset SPS mismatch. seq_parameter_set_id: %d\n", sps->seq_parameter_set_id);
     reset_subset_sps(subset_sps);
   }
   memcpy (&subset_sps->sps, sps, sizeof (seq_parameter_set_rbsp_t));
