@@ -66,6 +66,8 @@
 #include "configfile.h"
 #define MAX_ITEMS_TO_PARSE  10000
 
+InputParameters cfgparams;
+
 static void PatchInp                (InputParameters *p_Inp);
 
 /*!
